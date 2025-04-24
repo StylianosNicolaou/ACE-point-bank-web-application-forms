@@ -58,47 +58,48 @@ export default function FormBG() {
         Application Form – Letter of Guarantee
       </h1>
       <form onSubmit={handleSubmit} className="space-y-10 max-w-3xl mx-auto">
-        <FormSection title="1. Applicant">
+        <FormSection title={<>1. Applicant <span style={{ color: 'red' }}>*</span> </>}>
+        <FormInput
+          label={<>Name <span style={{ color: 'red' }}>*</span> </>}
+          name="applicantName"
+          value={form.applicantName}
+          onChange={handleChange}
+        />
+
           <FormInput
-            label="Name"
-            name="applicantName"
-            value={form.applicantName}
-            onChange={handleChange}
-          />
-          <FormInput
-            label="Address"
+            label={<>Address <span style={{ color: 'red' }}>*</span> </>}
             name="applicantAddress"
             value={form.applicantAddress}
             onChange={handleChange}
           />
           <FormInput
-            label="Phone"
+            label={<>Phone <span style={{ color: 'red' }}>*</span> </>}
             name="applicantPhone"
             value={form.applicantPhone}
             onChange={handleChange}
           />
           <FormInput
-            label="Fax"
+            label={<>Fax <span style={{ color: 'red' }}>*</span> </>}
             name="applicantFax"
             value={form.applicantFax}
             onChange={handleChange}
           />
           <FormInput
-            label="Email"
+            label={<>Email <span style={{ color: 'red' }}>*</span> </>}
             name="applicantEmail"
             type="email"
             value={form.applicantEmail}
             onChange={handleChange}
           />
           <FormInput
-            label="Contact Person"
+            label={<>Contact Person <span style={{ color: 'red' }}>*</span> </>}
             name="contactPerson"
             value={form.contactPerson}
             onChange={handleChange}
           />
         </FormSection>
 
-        <FormSection title="2. Amount of Fin Instrument">
+        <FormSection title={<>2. Amount of Financal Instrument <span style={{ color: 'red' }}>*</span> </>}>
           <FormInput
             name="amount"
             value={form.amount}
@@ -106,7 +107,7 @@ export default function FormBG() {
           />
         </FormSection>
 
-        <FormSection title="3. Currency">
+        <FormSection title={<>3. Currency <span style={{ color: 'red' }}>*</span> </>}>
           <FormInput
             name="currency"
             value={form.currency}
@@ -114,60 +115,60 @@ export default function FormBG() {
           />
         </FormSection>
 
-        <FormSection title="4. Beneficiary Bank">
+        <FormSection title={<>4. Beneficiary Bank <span style={{ color: 'red' }}>*</span> </>}>
           <FormInput
-            label="Name"
+            label={<>Name <span style={{ color: 'red' }}>*</span> </>}
             name="beneficiaryBankName"
             value={form.beneficiaryBankName}
             onChange={handleChange}
           />
           <FormInput
-            label="Address"
+            label={<>Address <span style={{ color: 'red' }}>*</span> </>}
             name="beneficiaryBankAddress"
             value={form.beneficiaryBankAddress}
             onChange={handleChange}
           />
           <FormInput
-            label="SWIFT CODE"
+            label={<>SWIFT CODE <span style={{ color: 'red' }}>*</span> </>}
             name="beneficiaryBankSwift"
             value={form.beneficiaryBankSwift}
             onChange={handleChange}
           />
         </FormSection>
 
-        <FormSection title="5. Beneficiary">
+        <FormSection title={<>5. Beneficiary <span style={{ color: 'red' }}>*</span> </>}>
           <FormInput
-            label="Name"
+            label={<>Name <span style={{ color: 'red' }}>*</span> </>}
             name="beneficiaryName"
             value={form.beneficiaryName}
             onChange={handleChange}
           />
           <FormInput
-            label="Address"
+            label={<>Address <span style={{ color: 'red' }}>*</span> </>}
             name="beneficiaryAddress"
             value={form.beneficiaryAddress}
             onChange={handleChange}
           />
           <FormInput
-            label="Phone"
+            label={<>Phone <span style={{ color: 'red' }}>*</span> </>}
             name="beneficiaryPhone"
             value={form.beneficiaryPhone}
             onChange={handleChange}
           />
           <FormInput
-            label="Fax"
+            label={<>Fax <span style={{ color: 'red' }}>*</span> </>}
             name="beneficiaryFax"
             value={form.beneficiaryFax}
             onChange={handleChange}
           />
           <FormInput
-            label="Email"
+            label={<>Email <span style={{ color: 'red' }}>*</span> </>}
             name="beneficiaryEmail"
             value={form.beneficiaryEmail}
             onChange={handleChange}
           />
           <FormInput
-            label="Account or IBAN"
+            label={<>Account or IBAN <span style={{ color: 'red' }}>*</span> </>}
             name="beneficiaryAccount"
             value={form.beneficiaryAccount}
             onChange={handleChange}

@@ -65,9 +65,63 @@ export default function FormLC() {
   return (
     <main className="min-h-screen px-6 py-10 bg-white text-black">
       <h1 className="text-2xl font-semibold mb-8 text-center">
-        Application Form – L/C or Standby L/C
+        Application Form – LC or SBLC
       </h1>
       <form onSubmit={handleSubmit} className="space-y-10 max-w-3xl mx-auto">
+      <FormSection title="Document Type">
+        <div className="space-y-2">
+          <div className="flex items-center gap-2">
+            <input
+              type="radio"
+              name="docType"
+              value="Documentary LC"
+              checked={form.docType === "Documentary LC"}
+              onChange={handleChange}
+            />
+            <label className="text-sm">Documentary LC</label>
+          </div>
+          <div className="flex items-center gap-2">
+            <input
+              type="radio"
+              name="docType"
+              value="Standby LC"
+              checked={form.docType === "Standby LC"}
+              onChange={handleChange}
+            />
+            <label className="text-sm">Standby LC</label>
+          </div>
+          <div className="flex items-center gap-2">
+            <input
+              type="radio"
+              name="docType"
+              value="Letter of Guarantee"
+              checked={form.docType === "Letter of Guarantee"}
+              onChange={handleChange}
+            />
+            <label className="text-sm">Letter of Guarantee</label>
+          </div>
+          <div className="flex items-center gap-2">
+            <input
+              type="radio"
+              name="docType"
+              value="Other"
+              checked={form.docType === "Other"}
+              onChange={handleChange}
+            />
+            <label className="text-sm">Other</label>
+          </div>
+
+          {form.docType === "Other" && (
+            <FormInput
+              name="otherDocType"
+              value={form.otherDocType || ""}
+              onChange={handleChange}
+              placeholder="Please specify"
+            />
+          )}
+        </div>
+      </FormSection>
+
         <FormSection title="1. Applicant">
           <FormInput
             label="Name"
@@ -116,7 +170,15 @@ export default function FormLC() {
           />
         </FormSection>
 
-        <FormSection title="3. Advising Bank">
+        <FormSection title="3. Currency">
+          <FormInput
+            name="amount"
+            value={form.amount}
+            onChange={handleChange}
+          />
+        </FormSection>
+
+        <FormSection title="4. Advising Bank">
           <FormInput
             label="Name"
             name="advisingBankName"
@@ -137,7 +199,7 @@ export default function FormLC() {
           />
         </FormSection>
 
-        <FormSection title="4. Beneficiary">
+        <FormSection title="5. Beneficiary">
           <FormInput
             label="Name"
             name="beneficiaryName"
@@ -176,7 +238,7 @@ export default function FormLC() {
           />
         </FormSection>
 
-        <FormSection title="5. Expiration Date">
+        <FormSection title="6. Expiration Date">
           <FormInput
             type="date"
             name="expirationDate"
@@ -185,7 +247,7 @@ export default function FormLC() {
           />
         </FormSection>
 
-        <FormSection title="6. Description of Goods/Services">
+        <FormSection title="7. Description of Goods/Services">
           <FormTextarea
             name="goodsDescription"
             value={form.goodsDescription}
@@ -193,7 +255,7 @@ export default function FormLC() {
           />
         </FormSection>
 
-        <FormSection title="7–9. Shipment Details">
+        <FormSection title="8. Shipment Details">
           <FormInput
             label="Latest Shipment Date"
             type="date"
@@ -215,7 +277,7 @@ export default function FormLC() {
           />
         </FormSection>
 
-        <FormSection title="10–13. Shipment Preferences">
+        <FormSection title="9. Shipment Preferences">
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
               <label className="text-sm font-medium text-gray-700">
@@ -279,7 +341,7 @@ export default function FormLC() {
           </div>
         </FormSection>
 
-        <FormSection title="14. Pro Forma Invoice">
+        <FormSection title="10. Pro Forma Invoice">
           <FormTextarea
             label="Merchandise Description"
             name="merchandiseDescription"
@@ -301,7 +363,7 @@ export default function FormLC() {
           />
         </FormSection>
 
-        <FormSection title="15. Documents Required">
+        <FormSection title="11. Documents Required">
           <FormTextarea
             name="documentsRequired"
             value={form.documentsRequired}
@@ -309,7 +371,7 @@ export default function FormLC() {
           />
         </FormSection>
 
-        <FormSection title="16. Special Conditions">
+        <FormSection title="12. Special Conditions">
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
               <label className="text-sm font-medium text-gray-700">
