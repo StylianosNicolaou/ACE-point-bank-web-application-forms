@@ -24,6 +24,7 @@ export default function FormLC() {
     expirationDate: "",
     goodsDescription: "",
     latestShipmentDate: "",
+    merchandiseDescription: "",
     shipmentFrom: "",
     shipmentTo: "",
     partialShipment: "Allowed",
@@ -107,7 +108,7 @@ export default function FormLC() {
           />
         </FormSection>
 
-        <FormSection title="2. Amount of Fin Instrument">
+        <FormSection title="2. Amount of Financial Instrument">
           <FormInput
             name="amount"
             value={form.amount}
@@ -279,6 +280,12 @@ export default function FormLC() {
         </FormSection>
 
         <FormSection title="14. Pro Forma Invoice">
+          <FormTextarea
+            label="Merchandise Description"
+            name="merchandiseDescription"
+            value={form.merchandiseDescription}
+            onChange={handleChange}
+          />
           <FormInput
             label="Number"
             name="invoiceNumber"
