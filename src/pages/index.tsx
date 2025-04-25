@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-white text-black px-4">
       <h1 className="text-4xl font-semibold mb-6 tracking-tight">
-        POINT BANK LTD
+        APPLICATION FORM
       </h1>
       <p className="text-lg mb-12 text-center max-w-xl">
         Please select the application form you wish to fill in and submit.

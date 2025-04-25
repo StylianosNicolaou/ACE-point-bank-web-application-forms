@@ -68,7 +68,8 @@ export default function FormLC() {
         Application Form – LC or SBLC
       </h1>
       <form onSubmit={handleSubmit} className="space-y-10 max-w-3xl mx-auto">
-      <FormSection title="Document Type">
+      <FormSection title={<>Document Type <span style={{ color: 'red' }}>*</span> </>}>
+
         <div className="space-y-2">
           <div className="flex items-center gap-2">
             <input
@@ -122,47 +123,48 @@ export default function FormLC() {
         </div>
       </FormSection>
 
-        <FormSection title="1. Applicant">
+        <FormSection title={<>1. Applicant <span style={{ color: 'red' }}>*</span> </>}>
           <FormInput
-            label="Name"
+            label={<>Name <span style={{ color: 'red' }}>*</span> </>}
             name="applicantName"
             value={form.applicantName}
             onChange={handleChange}
           />
           <FormInput
-            label="Address"
+            label={<>Address<span style={{ color: 'red' }}>*</span> </>}
             name="applicantAddress"
             value={form.applicantAddress}
             onChange={handleChange}
           />
           <FormInput
-            label="Phone"
+            label={<>Phone<span style={{ color: 'red' }}>*</span> </>}
             name="applicantPhone"
             value={form.applicantPhone}
             onChange={handleChange}
           />
           <FormInput
-            label="Fax"
+            label={<>Fax <span style={{ color: 'red' }}>*</span> </>}
             name="applicantFax"
             value={form.applicantFax}
             onChange={handleChange}
           />
           <FormInput
-            label="Email"
+            label={<>Email <span style={{ color: 'red' }}>*</span> </>}
             type="email"
             name="applicantEmail"
             value={form.applicantEmail}
             onChange={handleChange}
           />
           <FormInput
-            label="Contact Person"
+            label={<>Contact Person <span style={{ color: 'red' }}>*</span> </>}
             name="contactPerson"
             value={form.contactPerson}
             onChange={handleChange}
           />
         </FormSection>
 
-        <FormSection title="2. Amount of Financial Instrument">
+        <FormSection title={<>2. Amount of financial instrument <span style={{ color: 'red' }}>*</span> </>}
+        >
           <FormInput
             name="amount"
             value={form.amount}
@@ -170,7 +172,8 @@ export default function FormLC() {
           />
         </FormSection>
 
-        <FormSection title="3. Currency">
+        <FormSection title={<>3. Currency <span style={{ color: 'red' }}>*</span> </>}
+        >
           <FormInput
             name="amount"
             value={form.amount}
@@ -178,60 +181,62 @@ export default function FormLC() {
           />
         </FormSection>
 
-        <FormSection title="4. Advising Bank">
+        <FormSection title={<>4. Advising Bank <span style={{ color: 'red' }}>*</span> </>}
+        >
           <FormInput
-            label="Name"
+            label={<>Name <span style={{ color: 'red' }}>*</span> </>}
             name="advisingBankName"
             value={form.advisingBankName}
             onChange={handleChange}
           />
           <FormInput
-            label="Address"
+            label={<>Address <span style={{ color: 'red' }}>*</span> </>}
             name="advisingBankAddress"
             value={form.advisingBankAddress}
             onChange={handleChange}
           />
           <FormInput
-            label="SWIFT CODE"
+            label={<>SWIFT CODE <span style={{ color: 'red' }}>*</span> </>}
             name="advisingBankSwift"
             value={form.advisingBankSwift}
             onChange={handleChange}
           />
         </FormSection>
 
-        <FormSection title="5. Beneficiary">
+        <FormSection title={<>5. Beneficiary <span style={{ color: 'red' }}>*</span> </>}
+        >
           <FormInput
-            label="Name"
+            label={<>Name <span style={{ color: 'red' }}>*</span> </>}
             name="beneficiaryName"
             value={form.beneficiaryName}
             onChange={handleChange}
           />
           <FormInput
-            label="Address"
+            label={<>Address <span style={{ color: 'red' }}>*</span> </>}
             name="beneficiaryAddress"
             value={form.beneficiaryAddress}
             onChange={handleChange}
           />
           <FormInput
-            label="Phone"
+            label={<>Phone <span style={{ color: 'red' }}>*</span> </>}
             name="beneficiaryPhone"
             value={form.beneficiaryPhone}
             onChange={handleChange}
           />
           <FormInput
-            label="Fax"
+            label={<>Fax <span style={{ color: 'red' }}>*</span> </>}
             name="beneficiaryFax"
             value={form.beneficiaryFax}
             onChange={handleChange}
           />
           <FormInput
-            label="Email"
+            label={<>Email <span style={{ color: 'red' }}>*</span> </>}
             name="beneficiaryEmail"
             value={form.beneficiaryEmail}
             onChange={handleChange}
           />
           <FormInput
-            label="Account or IBAN"
+            label={<>Account or IBAN <span style={{ color: 'red' }}>*</span> </>}
             name="beneficiaryAccount"
             value={form.beneficiaryAccount}
             onChange={handleChange}
