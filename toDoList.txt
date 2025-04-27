@@ -1,10 +1,11 @@
 PDF:
     - content to table
     - headings bold
-    - asteriks next to required fields
+    - 2 asteriks next to required/preffered fields
 
 Forms:
-    - asteriks next to required fileds label
+    - 2 asteriks next to required fileds label
     - at the top of the form, explain what is the asteriks
     - add back button to the Forms
     - fix the message after the submission
+    - beneficiary/seller
